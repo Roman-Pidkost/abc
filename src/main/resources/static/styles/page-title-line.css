@@ -1,0 +1,21 @@
+main {
+    margin-top: -8.5px;
+    /*background-color: #efefef;*/
+}
+
+div.page-title-line {
+    margin: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #488cf9;
+}
+
+div.page-title-line p {
+    margin-left: 10%;
+    margin-top: 0.6%;
+    padding-top: 0.7%;
+    font-size: 23px;
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    color: #e7e7e7;
+}

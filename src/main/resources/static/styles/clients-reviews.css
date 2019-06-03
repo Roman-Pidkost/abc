@@ -1,0 +1,6 @@
+section.clients-reviews {
+    height: 700px;
+    background-image: url(../images/reviews-back.jpg);
+    background-size: cover;
+    opacity: 0.4;
+}

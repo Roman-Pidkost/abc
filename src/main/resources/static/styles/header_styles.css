@@ -1,0 +1,74 @@
+header {
+    display: block;
+    /*background-attachment: fixed;*/
+    width: 100%;
+    height: 400px;
+    position: relative;
+    text-align: center;
+}
+/*http://business-kernel.ru/wp-content/uploads/2015/10/bg2.jpg*/
+.main-header {
+    background: #fff url(http://business-kernel.ru/wp-content/uploads/2015/10/bg2.jpg) 50% 0 no-repeat;
+    background-size: cover;
+    opacity: 0.85;
+}
+
+.hgroup {
+    text-align: left;
+    display: inline-block;
+    max-width: 1200px;
+    width: 98%;
+    margin: 0 auto;
+    padding: 15px 1%;
+}
+
+.logo-container {
+    float: left;
+}
+
+.logo-img {
+    max-width: 120px;
+    border: 0;
+    border-radius: 15%;
+}
+
+section.header-contacts {
+    display: block;
+    float: right;
+    padding: 10px 10px;
+    margin-top: 15px;
+    font-size: 17px;
+    font-weight: 200;
+    letter-spacing: 1.5px;
+    background-color: white;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+i.fas {
+    margin-right: 3px;
+    color: #2676F2;
+}
+
+div.line {
+    margin: 6px 0;
+}
+
+header h2 {
+    font-size: 27px;
+    font-family: 'Abril Fatface', cursive;
+    text-align: left;
+    margin: inherit;
+    margin-left: 3.5%;
+    margin-top: -25px;
+    color: black;
+    text-shadow: 1px 1px rgba(255, 255, 255, 0.4);
+    line-height: 1.3;
+}
+
+#pers-changes {
+    width: 90%;
+    margin-left: 4%;
+    margin-top: 9%;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+}

@@ -1,0 +1,38 @@
+div.competences-container {
+    display: block;
+    width: 70%;
+    margin-left: 20%;
+    margin-top: 2%;
+}
+
+main section.competences {
+    padding-top: 1px;
+    background-image: url("../images/clear-paper.png");
+    background-size: inherit;
+    height: 600px;
+    opacity: 0.5;
+}
+
+.each-compt {
+    border-radius: 50%;
+    text-align: center;
+    display: inline-block;
+    background-color: #fff;
+    width: 20%;
+    padding: 5% 0;
+    margin: 1% 0.5%;
+}
+
+i.fa-compt {
+    color: #003fff;
+    font-size: 42px;
+    margin: 10px 0 10px 0;
+}
+
+figcaption.text-compt {
+    color: black;
+    font-weight: 400;
+    margin: 0;
+    line-height: 1.1;
+    font-size: 18px;
+}
