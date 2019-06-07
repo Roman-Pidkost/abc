@@ -10,8 +10,19 @@ public class HtmlController {
     public String home() {
         return "index.html";
     }
+
     @RequestMapping("/about")
     public String about() {
         return "about_us.html";
+    }
+
+    @RequestMapping("/employee")
+    public String employee() {
+        return "find_employee.html";
+    }
+
+    @RequestMapping("/work")
+    public String work() {
+        return "find_work.html";
     }
 }

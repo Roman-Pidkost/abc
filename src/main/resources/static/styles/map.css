@@ -1,0 +1,9 @@
+div.map-container {
+    width: 70%;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+#map {
+    height: 200px;
+}

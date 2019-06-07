@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KRPK Corporation</title>
+    <link rel="stylesheet" href="styles/body_styles.css">
+    <link rel="stylesheet" href="styles/header_styles.css">
+    <link rel="stylesheet" href="styles/about-us.css">
+    <link rel="stylesheet" href="styles/our-photos.css">
+    <link rel="stylesheet" href="styles/main-logo.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/page-title-line.css">
+    <link rel="stylesheet" href="styles/find_employee_style.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+          integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+<body>
+<header class="main-header">
+    <div class="hgroup">
+        <div class="logo-container">
+            <a class="logo">
+                <img class="logo-img" src="images/company-logo.jpg" alt="company-logo">
+            </a>
+        </div>
+        <section class="header-contacts">
+            <div class="line">
+                <i class="fas fa-map-marker-alt"></i>
+                Львів: вул. Козельницька, 2а
+            </div>
+            <div class="line">
+                <i class="fas fa-phone"></i>
+                +38 (097) 25 54 223
+            </div>
+            <div class="line">
+                <i class="fas fa-phone"></i>
+                +38 (093) 35 69 778
+            </div>
+        </section>
+    </div>
+    <h2>Рекрутингова компанія</h2>
+    <nav class="navbar navbar-default" id="pers-changes">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed btn-js" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">KRPK</a>
+            </div>
+
+            <div class="collapse navbar-collapse col_div" id="bs-example-navbar-collapse-1 collapsing">
+                <ul class="nav navbar-nav">
+                    <li><a href="/">Головна</a></li>
+                    <li><a href="/work">Знайти Роботу</a></li>
+                    <li class="active"><a href="find_employee.html">Знайти Працівника</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/about">Про Нас <i class="fas fa-info-circle"></i></a></li>
+                    <li><a href="#">Контакти <i class="fas fa-address-book"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<main>
+    <div class="page-title-line">
+        <p>Знайти працівника</p>
+    </div>
+    <section class="workers">
+
+    </section>
+    <footer id="footer">
+        <div class="inner-footer">
+            <div class="contacts-footer">
+                <h2 class="widget-title-footer">Контакти</h2>
+                <div class="widget-text-footer">
+                    +38 (097) 25 54 223
+                    <br>
+                    +38 (093) 35 69 778
+                    <br>
+                    krpkorg@gmail.com
+                    <br>
+                    <a href="#">
+                        <i class="footer-icons fab fa-instagram"></i>
+                    </a>
+                    <a href="#">
+                        <i class="footer-icons fab fa-facebook-f"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="rights-footer">
+                Приєднюйся до KRPK
+                <br>
+                KRPK Company@2019 |
+            </div>
+        </div>
+    </footer>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    let $workers = $('.workers');
+
+    $.ajax({
+        url: "http://localhost:8080/human?sortBy=salary&direction=ASC",
+        type: 'GET',
+        success: setEmployees
+    });
+
+    function setEmployees(employees) {
+        for (let i = 0; i < employees.length; i++) {
+            appendEmployeeToView(employees[i]);
+        }
+    }
+
+    function appendEmployeeToView(elpoyee) {
+        $workers.append(`
+            <div class="work_propos">
+                <h2>${elpoyee.industry}</h2>
+                <h3>${elpoyee.firstName} ${elpoyee.lastName}</h3>
+                <h4>Дата народження: ${elpoyee.dateOfBirth}</h4>
+                <h4>Опис: ${elpoyee.description}</h4>
+                <p class="work_propos_payments">Зарплата: ${elpoyee.salary} грн.</p>
+            </div>
+        `);
+    }
+</script>
+<script src="scripts/script.js"></script>
+<script src="scripts/our-photos-script.js"></script>
+</body>
+</html>

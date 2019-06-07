@@ -1,0 +1,26 @@
+.main_box{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+}
+.work_propos{
+    background-color: gainsboro;
+    margin: 2%;
+    padding: 1%;
+    -webkit-box-shadow: 6px 7px 21px -4px rgba(0,0,0,0.45);
+    -moz-box-shadow: 6px 7px 21px -4px rgba(0,0,0,0.45);
+    box-shadow: 6px 7px 21px -4px rgba(0,0,0,0.45);
+}
+.work_propos h2{
+    display: inline-block;
+    width: 400px;
+}
+.wog_img{
+    display: inline-block;
+    float: right;
+    height: 100px;
+    width: 100px;
+}
+.work_propos_payments{
+    color: darkred;
+}
