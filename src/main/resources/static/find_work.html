@@ -109,7 +109,7 @@
     let $works = $('.works');
 
     $.ajax({
-        url: "http://localhost:8080/vacancies?sortBy=salary&direction=ASC",
+        url: "https://kprk.herokuapp.com/vacancies?sortBy=salary&direction=ASC",
         type: 'GET',
         success: setWorks
     });
